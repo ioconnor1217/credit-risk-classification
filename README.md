@@ -8,8 +8,15 @@ This analysis predicts whether a loan is healthy (0) or high-risk (1) using mach
 
 Model: Logistic Regression
 
-Healthy loans (0): Precision 1.00, Recall 0.99, F1-score 1.00
-High-risk loans (1): Precision 0.86, Recall 0.94, F1-score 0.90
+Healthy loans (0):
+-Precision 1.00,
+-Recall 0.99,
+-F1-score 1.00
+
+High-risk loans (1):
+-Precision 0.86,
+-Recall 0.94,
+-F1-score 0.90
 
 ## Summary
 
