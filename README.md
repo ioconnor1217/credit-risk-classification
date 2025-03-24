@@ -1,23 +1,14 @@
-# Module 12 Report Template
-
 ## Overview of the Analysis
+The purpose of this analysis was to create a logistical regression model to help in predicting healthy or high-risk loans. After creating the model, training it on a sample of the data, and making a confusion matrix and a classification report, I created this report for assessing the models suitability for data-driven business decision-making. Here are my findings: 
 
-This analysis predicts whether a loan is healthy (0) or high-risk (1) using machine learning. The dataset includes financial variables like loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt. A Logistic Regression model is used for classification, following a process of data preparation, splitting, training, prediction, and evaluation.
+#### Results
+- __Accuracy: 99%__ -- The model correctly classified most loans with a 99% overall accuracy. 
+- __False Classifications__ -- It only __misclassified 146 out of 19,384 cases__.
+    - __False Positives__ -- There were 110 healthy loans that were incorrectly classified as high-risk.
+    - __False Negatives__ -- There were 36 high-risk loans were incorrectly classified as healthy.
+- __Precision for High-Risk Loans: 84%__ -- Of all loans predicted as high-risk, __16% were actually healthy__, which could lead to unnecessary loan denials. 
+- __Recall for High-Risk Loans: 94%__ -- The model successfully identified 94% of actual high-risk loans meaning __only 6% of high-risk loans were missed.__ 
+- __High Class Imbalance__ -- The dataset contains __18,765 healthy loans and only 619 high-risk loans.__ This could be a factor in the less accurate high-risk classifications. 
 
-## Results
-
-Model: Logistic Regression
-
-Healthy loans (0):
--Precision 1.00,
--Recall 0.99,
--F1-score 1.00
-
-High-risk loans (1):
--Precision 0.86,
--Recall 0.94,
--F1-score 0.90
-
-## Summary
-
-The Logistic Regression model performs well, with high accuracy and strong recall for high-risk loans. While it slightly overpredicts high-risk loans, it correctly identifies most defaults. Since preventing defaults is a high priority, recall is possibly even more important than precision. The model’s 94% recall for high-risk loans ensures it flags most risky loans which is great.
+### Summary
+The logistical regression model demonstrated __high accuracy (99%)__, with particular good predictions for healthy loans. However, there is a concern regarding the precision of high-risk loan predictions. The misclassification of healthy loans as high-risk could lead to a loss in business opportunities. So, while the model is effective at capturing high risk loans, its precision needs improvement before full implementation. Addressing this issue might require techniques such as adjusting the decision thresholds, training the model with more 1 (high-risk loan) cases, or even using other methods of classification to discover more about the data. 
